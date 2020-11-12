@@ -66,7 +66,7 @@ function HumanNavigator() {
       <HumanStack.Screen
         name="HumanScreen"
         component={HumanScreen}
-        options={{ headerTitle: 'Human' }}
+        options={{ headerTitle: 'Birthday Blessings!', headerTitleAlign: 'center' }}
       />
     </HumanStack.Navigator>
   );
