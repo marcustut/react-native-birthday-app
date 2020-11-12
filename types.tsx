@@ -1,17 +1,25 @@
+import { RouteProp } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
+
 export type RootStackParamList = {
   Root: undefined;
   NotFound: undefined;
 };
 
 export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Home: undefined;
+  Human: undefined;
 };
 
-export type TabOneParamList = {
-  TabOneScreen: undefined;
+export type HomeParamList = {
+  HomeScreen: undefined;
 };
 
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+export type HumanParamList = {
+  HumanScreen: undefined;
 };
+
+export type HumanProps = {
+  route: RouteProp<BottomTabParamList, 'Human'>;
+  navigation: StackNavigationProp<BottomTabParamList, 'Human'>;
+}

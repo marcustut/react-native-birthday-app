@@ -6,14 +6,22 @@ export default {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Home: {
             screens: {
-              TabOneScreen: 'one',
+              HomeScreen: 'home',
             },
           },
-          TabTwo: {
+          Human: {
             screens: {
-              TabTwoScreen: 'two',
+              HumanScreen: {
+                path: 'human/:name',
+                parse: {
+                  name: (name: any) => `${String(name).toLowerCase()}`,
+                },
+                stringify: {
+                  name: (name: any) => name,
+                },
+              },
             },
           },
         },
