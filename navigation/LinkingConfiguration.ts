@@ -14,6 +14,9 @@ export default {
           Human: {
             screens: {
               HumanScreen: {
+                path: 'human',
+              },
+              PersonScreen: {
                 path: 'human/:name',
                 parse: {
                   name: (name: any) => `${String(name).toLowerCase()}`,
@@ -21,7 +24,7 @@ export default {
                 stringify: {
                   name: (name: any) => name,
                 },
-              },
+              }
             },
           },
         },

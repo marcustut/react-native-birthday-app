@@ -7,6 +7,7 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import HomeScreen from '../screens/HomeScreen';
 import HumanScreen from '../screens/HumanScreen';
+import PersonScreen from '../screens/PersonScreen';
 import { BottomTabParamList, HomeParamList, HumanParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
@@ -22,14 +23,14 @@ export default function BottomTabNavigator() {
         name="Home"
         component={HomeNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-home" color={color} />,
         }}
       />
       <BottomTab.Screen
         name="Human"
         component={HumanNavigator}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-people" color={color} />,
         }}
       />
     </BottomTab.Navigator>
@@ -66,7 +67,12 @@ function HumanNavigator() {
       <HumanStack.Screen
         name="HumanScreen"
         component={HumanScreen}
-        options={{ headerTitle: 'Birthday Blessings!', headerTitleAlign: 'center' }}
+        options={{ headerTitle: 'Birthday Blessings!' }}
+      />
+      <HumanStack.Screen
+        name="PersonScreen"
+        component={PersonScreen}
+        options={{ headerTitleAlign: 'center' }}
       />
     </HumanStack.Navigator>
   );
